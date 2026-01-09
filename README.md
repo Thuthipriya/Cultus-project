@@ -38,9 +38,9 @@ Results:
   Light Blue Area Uncertainty Interval Confidence Range
 
 Files in Repository:
-  Ride Demand Forecasting Notebook With Code
-  original_data csv file with ds y and rain variables
-  forecast results csv file contains predicted ride demand including confidence ranges
+  Ride Demand Forecasting Notebook With Code.
+  original_data csv file with ds y and rain variables.
+  Forecast results csv file contains predicted ride demand including confidence ranges.
 
 Future Improvements:
   Use actual historical records rather than generated examples.
