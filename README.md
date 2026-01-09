@@ -1,25 +1,53 @@
-Ride Demand Prediction with Facebook Prophet
+Ride Demand Prediction with Prophet
 
-  Ahead of the curve, this effort predicts how many rides will be needed by studying past patterns. Using a tool called Facebook Prophet, it tracks changes over time to spot trends. Instead of guessing, it relies on data that shifts day by day. What emerges is a clearer picture of future usage based on what happened before
-  Looking ahead, this work aims to estimate how many rides will be needed by studying past patterns. Instead of guessing, it uses Facebook Prophet - a tool built for predicting timelines - to spot future needs. By learning what happened before, systems that book rides can adjust better. Planning gets easier when you see where demand might go. One step at a time, smarter decisions follow.
-  Forecasting how many rides get booked every day forms the core aim here. Using past numbers helps spot repeating trends across weeks and years. Outside factors like rain join the analysis through added variables. Facebook Prophet handles the predictions, offering specific future values alongside ranges meant to capture uncertainty - set at 80% and 95%. How well those ranges match reality gets checked by measuring actual hits within them. Data covers precisely twenty-four months, starting in 2021 and ending in 2022. This span gives enough ground for spotting short- and long-term cycles alike. At first, a basic version of Prophet runs with just weekly and annual rhythms turned on, plus rainfall included as a supporting factor. Ahead of everything else, an 80% prediction range helped check how well the first setup worked. Starting there, past data points moved forward step by step to adjust Prophet's settings. Different setups for trend shifts and repeating patterns got tested; instead of picking randomly, the one with least error on average shaped the final version. To test performance, earlier slices of time fed into forecasts later. Results showed errors stayed around 4% on average - close enough to call it sharp for predicting rides. Clear seasonal trends showed up in the results. Because of how the data was built, swings might be smoother than actual conditions. Predictions hold well when looking just a little ahead. Confidence ranges helped show possible ups and downs. Outside influences - such as storms or big gatherings - were left out entirely. Over longer periods, the model could drift off track. While patterns repeat, they do not always match future behavior exactly.
-  Getting around town needs reliable predictions. When services guess how many people want rides, they can do things like send drivers where needed, cut down waiting times, leave fewer cars idle. Planning gets easier when patterns show up clearly. A method called time series steps in here. It uses past numbers to suggest what might happen next. One option that handles shifts and breaks well is Facebook Prophet. The idea behind this work? See if it holds up when guessing future ride counts. Not every model fits every road.
-Finding what comes next in ride numbers isn’t easy - patterns shift with seasons, habits change slowly over time, surprises pop up without warning. This work aims to shape a tool that learns from old rides to guess how many will be needed later. Not perfect, but close.
-Data loaded into system. From there, the date field shifted into a form Prophet can use - called ds. After that, checks confirmed everything lines up without errors.
-  Each day's ride numbers make up the dataset. Spanning two full years, it tracks how often people requested trips. Date appears under the label ds. Ride count shows up as y - nothing more than a tally per day. No real-world source feeds this info - it was built from scratch just to teach concepts. Made-up figures fill every row, meant only for practice and showing methods clearly.
-Model Building Started Prophet Model with Daily Seasonality Training on Historical Data
-Forecasting Future Dates Ride Demand Confidence Intervals
-  Visualization of forecast graph showing trend and seasonal patterns
-Performance Evaluation Compare Predicted and Actual Values Using Error Metrics Including MAE RMSE MAPE
-Technologies Used Python Pandas Matplotlib Facebook Prophet Google Colab GitHub
-METHOD Load Dataset Preprocess Data Format for Prophet Train Model Forecast Demand Plot Trends Assess Performance
+Project Overview:
+  Ahead of everything, prediction of ride needs drives this work. A made-up collection of data shows how many rides happen each day - call it `y` - alongside rain levels marked as `rain`, stretched across twenty-four months. Instead of just tracking patterns, the aim lands on guessing what comes next in ride numbers. Checking how close those guesses match reality becomes the measure that matters.
 
-PROJECT STRUCTURE
-Ride Forecast Directory Structure
-Future demand forecasts generated showing trends seasonality and forecast confidence intervals with captured demand patterns over time
-Looking at the results, the model handled general demand shifts well. While seasonal changes stood out clearly, the forecast ranges gave a sense of possible variation. Short-term outlooks came through with dependable accuracy. Despite minor fluctuations, trust in near-future projections remains strong
-Synthetic Data Two Year Forecast Plots Predicted Demand CSV Model Results Saved
-Though made to mimic patterns, synthetic numbers might miss how chaotic actual markets get. Weather shifts, big happenings - those weren’t part of the setup. Predictions could drift off track the farther they stretch into the future.
+Dataset:
+Patient Safety Culture Stronger In Hospitals With Better Work Environments
+Count how often people ride bikes. That number is what we are trying to understand
 
-FUTURE ENHANCEMENT Incorporate real ride booking data Include weather and holiday variables Test Prophet against ARIMA and LSTM Launch as a web app
-One thing stands clear - predicting ride requests works well with Facebook Prophet. Trends show up cleanly, patterns repeat on schedule. Because of that, daily operations gain a useful tool. Planning around customer needs becomes less guesswork. What matters most? The system adapts without constant oversight. Unexpected spikes get noticed early. Quiet hours stand out just as much. In the end, timing drives better decisions.
+Weather shows whether it rained - one means rain happened, zero stands for no rainfall. Sometimes moisture arrives; other times skies stay dry
+  Dataset Contains 730 Rows of Daily Data Spanning Two Years
+  Synthetic Data Generated for Modeling Use
+
+Methodology:
+
+1. Data Preparation
+  A spike here, a dip there - patterns emerged across days, months, seasons. Movement wasn’t random; cycles repeated each year, echoes every week. Underlying drift shaped long-term shifts, steady and slow. Data points lined up with rhythm, pulled by invisible tugs of time.
+  Added rain as external regressor.
+  Eighty percent of the data goes to training. The rest, twenty percent, is kept for testing. How it's divided matters. This split helps measure performance later. One part trains the model. The other checks how well it learned.
+
+2. Model Selection
+  Facebook Prophet handled forecasts by capturing trends plus seasonality patterns. Patterns shifted smoothly thanks to its flexible modeling approach. Trend changes appeared naturally across different time intervals. Seasonal shifts stood out clearly without extra tuning steps. Model updates adapted well when new data arrived regularly.
+  Year after year, week after week - it picks up patterns without needing a push. Guesses on where things might land come with room to breathe, just in case.
+
+3. Model Training
+  Fitted Prophet Model on Training Data.
+  Added rain as external regressor in model training.
+
+4. Forecasting
+  Ahead of time, estimates showed how many rides were expected during testing. That information helped plan resources without waiting to see what happened. Instead of reacting later, teams used forecasts to prepare earlier.
+  Visualized Predictions With Confidence Intervals.
+  Evaluates prediction accuracy against actual outcomes.
+
+Results:
+  Forecast Plot
+  Black Dots Show Ride Demand
+  Blue Line Shows Expected Ride Requests
+  Light Blue Area Uncertainty Interval Confidence Range
+
+Files in Repository:
+  Ride Demand Forecasting Notebook With Code
+  original_data csv file with ds y and rain variables
+  forecast results csv file contains predicted ride demand including confidence ranges
+
+Future Improvements:
+  Use actual historical records rather than generated examples.
+  Add More Regressors Like Holidays Events Weather.
+  Use LSTM models for better forecasts.
+  Adjusting Prophet Settings for Better Predictions.
+
+References:
+  Facebook Prophet Documentation
+  Time Series Forecasting Guide
