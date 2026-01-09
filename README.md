@@ -8,7 +8,7 @@ Patient Safety Culture Stronger In Hospitals With Better Work Environments
 Count how often people ride bikes. That number is what we are trying to understand
 
 Weather shows whether it rained - one means rain happened, zero stands for no rainfall. Sometimes moisture arrives; other times skies stay dry
-  Dataset Contains 730 Rows of Daily Data Spanning Two Years
+  Dataset Contains Daily Data Spanning Two Years
   Synthetic Data Generated for Modeling Use
 
 Methodology:
@@ -32,10 +32,10 @@ Methodology:
   Evaluates prediction accuracy against actual outcomes.
 
 Results:
-  Forecast Plot
-  Black Dots Show Ride Demand
-  Blue Line Shows Expected Ride Requests
-  Light Blue Area Uncertainty Interval Confidence Range
+  Forecast Plot.
+  Black Dots Show Ride Demand.
+  Blue Line Shows Expected Ride Requests.
+  Light Blue Area Uncertainty Interval Confidence Range.
 
 Files in Repository:
   Ride Demand Forecasting Notebook With Code.
