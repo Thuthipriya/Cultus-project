@@ -49,5 +49,5 @@ Future Improvements:
   Adjusting Prophet Settings for Better Predictions.
 
 References:
-  Facebook Prophet Documentation
-  Time Series Forecasting Guide
+  Facebook Prophet Documentation,
+  Time Series Forecasting Guide.
